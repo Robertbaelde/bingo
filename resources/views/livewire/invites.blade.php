@@ -1,4 +1,4 @@
-<div>
+<div wire:poll.5s>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 p-6">
         <div class="md:flex md:items-center md:justify-between">
             <div class="flex-1 min-w-0">

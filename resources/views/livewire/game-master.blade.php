@@ -1,4 +1,4 @@
-<div>
+<div wire:poll.5s>
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 p-6">
         <div class="md:flex md:items-center md:justify-between">
             <div class="flex-1 min-w-0">
@@ -49,7 +49,10 @@
             <div class="overflow-hidden sm:rounded-md mt-4">
                 @if($selectedCard !== null)
                     <div class="max-w-lg mx-auto">
-                        Card from {{$selectedCard->user->name}} <a href="#" wire:click="closeCard">close</a>
+                        <div class="flex items-center justify-between flex-wrap">
+                            <span>Card from {{$selectedCard->user->name}}</span>
+                            <a href="#" wire:click="closeCard">close</a>
+                        </div>
                         <div class="grid grid-cols-5 gap-4 m-4">
                             @foreach($selectedCard->numbers as $number)
                                 <div class="relative flex h-16 w-16 text-center bg-white text-3xl border-2 border-gray-300">
@@ -79,10 +82,10 @@
                                         <div class="hidden md:block">
                                             <div>
                                                 <div class="mt-2 flex items-center text-sm leading-5 text-gray-500">
-                                                    <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                                    </svg>
-                                                    Thinks is a winner
+                                                    {{--<svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">--}}
+                                                        {{--<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>--}}
+                                                    {{--</svg>--}}
+                                                    {{--Thinks is a winner--}}
                                                 </div>
                                             </div>
                                         </div>
