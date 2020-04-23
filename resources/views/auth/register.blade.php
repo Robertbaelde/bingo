@@ -27,19 +27,19 @@
                             @enderror
                         </div>
 
-                        <div class="flex flex-wrap mb-6">
-                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">
-                                {{ __('E-Mail Address') }}:
-                            </label>
+                        {{--<div class="flex flex-wrap mb-6">--}}
+                            {{--<label for="email" class="block text-gray-700 text-sm font-bold mb-2">--}}
+                                {{--{{ __('E-Mail Address') }}:--}}
+                            {{--</label>--}}
 
-                            <input id="email" type="email" class="form-input w-full @error('email') border-red-500 @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                            {{--<input id="email" type="email" class="form-input w-full @error('email') border-red-500 @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">--}}
 
-                            @error('email')
-                                <p class="text-red-500 text-xs italic mt-4">
-                                    {{ $message }}
-                                </p>
-                            @enderror
-                        </div>
+                            {{--@error('email')--}}
+                                {{--<p class="text-red-500 text-xs italic mt-4">--}}
+                                    {{--{{ $message }}--}}
+                                {{--</p>--}}
+                            {{--@enderror--}}
+                        {{--</div>--}}
 
                         <div class="flex flex-wrap mb-6">
                             <label for="code" class="block text-gray-700 text-sm font-bold mb-2">
@@ -55,27 +55,27 @@
                             @enderror
                         </div>
 
-                        <div class="flex flex-wrap mb-6">
-                            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">
-                                {{ __('Password') }}:
-                            </label>
+                        {{--<div class="flex flex-wrap mb-6">--}}
+                            {{--<label for="password" class="block text-gray-700 text-sm font-bold mb-2">--}}
+                                {{--{{ __('Password') }}:--}}
+                            {{--</label>--}}
 
-                            <input id="password" type="password" class="form-input w-full @error('password') border-red-500 @enderror" name="password" required autocomplete="new-password">
+                            <input id="password" type="hidden" class="form-input w-full @error('password') border-red-500 @enderror" name="password" value="{{request()->input('code')}}">
 
-                            @error('password')
-                                <p class="text-red-500 text-xs italic mt-4">
-                                    {{ $message }}
-                                </p>
-                            @enderror
-                        </div>
+                            {{--@error('password')--}}
+                                {{--<p class="text-red-500 text-xs italic mt-4">--}}
+                                    {{--{{ $message }}--}}
+                                {{--</p>--}}
+                            {{--@enderror--}}
+                        {{--</div>--}}
 
-                        <div class="flex flex-wrap mb-6">
-                            <label for="password-confirm" class="block text-gray-700 text-sm font-bold mb-2">
-                                {{ __('Confirm Password') }}:
-                            </label>
+                        {{--<div class="flex flex-wrap mb-6">--}}
+                            {{--<label for="password-confirm" class="block text-gray-700 text-sm font-bold mb-2">--}}
+                                {{--{{ __('Confirm Password') }}:--}}
+                            {{--</label>--}}
 
-                            <input id="password-confirm" type="password" class="form-input w-full" name="password_confirmation" required autocomplete="new-password">
-                        </div>
+                            <input id="password-confirm" type="hidden" class="form-input w-full" name="password_confirmation" required value="{{request()->input('code')}}" >
+                        {{--</div>--}}
 
                         <div class="flex flex-wrap">
                             <button type="submit" class="inline-block align-middle text-center select-none border font-bold whitespace-no-wrap py-2 px-4 rounded text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700">
