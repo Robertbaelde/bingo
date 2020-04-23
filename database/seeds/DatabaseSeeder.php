@@ -13,13 +13,14 @@ class DatabaseSeeder extends Seeder
     {
          factory(\App\User::class)->create([
              'email' => 'r.baelde@temper.works',
-             'password' => bcrypt('secret'),
+             'password' => bcrypt('secret123'),
              'name' => 'Robert'
          ]);
 
-         factory(\App\Game::class)->create([
-             'active' => true
-         ]);
-
+        factory(\App\User::class)->create([
+            'email' => 'k.nijveldt@temper.works',
+            'password' => bcrypt('gamemaster'),
+            'name' => 'Kim'
+        ]);
     }
 }
