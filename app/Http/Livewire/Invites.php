@@ -17,6 +17,7 @@ class Invites extends Component
 
     public function createInvite()
     {
+        $this->code = trim($this->code);
         if(Str::length($this->code) < 1){
             return;
         }
