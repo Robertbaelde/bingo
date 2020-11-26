@@ -1,11 +1,11 @@
-<div wire:poll.5s class="bg-cover bg-center w-screen h-screen" style="background-image: url('https://temper.works/assets/img/home/join-the-movement.jpg')">
+<div wire:poll.5s class="bg-cover bg-center w-screen h-screen" style="background-image: url('https://publicart.amsterdam/wp-content/uploads/2018/06/1.2.-het-wiel-wsvanvliet-BETER.jpg')">
     <div class="top-0 left-0 z-40 absolute h-screen w-screen flex items-center justify-center font-lato" style=''>
         <div class="">
             <div class="bg-white opacity-75 p-8 text-gray-900 text-center text-lg max-w-lg rounded-sm" style="backdrop-filter: blur(4px)">
-                <h1 class="font-black text-4xl text-center">Temper Bingo!</h1>
+                <h1 class="font-black text-4xl text-center">Bingo!</h1>
                 <p class="mt-4 leading-relaxed">
                     Hi {{auth()->user()->name}},<br>
-                    Welcome to the temper bingo!<br>
+                    Welcome to the bingo!<br>
                     @if($game === null)
                         There is no game active yet
                     </div>
